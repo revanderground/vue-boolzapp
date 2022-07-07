@@ -1,0 +1,100 @@
+.topbackground{
+    background-color: #009688;
+    height: 100px;
+ 
+}
+
+.background-main{
+    background-color: #D9DBD5;
+    height: calc(100vh - 100px); 
+  
+}
+
+.app-box{
+    background-color: blue;
+    height:90vh;
+
+    left:0;
+    right:0;
+    top:30px;
+  
+    margin-left: auto;
+    margin-right: auto;
+  
+    position: absolute;
+    
+    width:75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+
+.left-side{
+    height:100%;
+    background-color: red;
+}
+
+.right-side{
+    height: 100%;
+    background-color: aqua;
+}
+
+.top-slide{
+    background-color: #E3DBD3;
+    height: 50px;
+    width:100%;
+    --bs-gutter-x: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+    
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+.my_img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+
+.myimg{
+    padding-left: 10px;
+}
+
+.username{
+  font-size: 0.8rem;
+  padding-left: 7px;
+
+}
+
+.icons-top-box{
+    width: 50%;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icon-box{
+    width: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.icon-top{
+    height: 20px;
+    width:20px;
+    color: darkgrey;
+    
+}
