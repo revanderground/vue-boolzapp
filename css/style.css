@@ -11,7 +11,7 @@
 }
 
 .app-box{
-    background-color: blue;
+    background-color: rgb(180, 180, 180);
     height:90vh;
 
     left:0;
@@ -22,8 +22,7 @@
     margin-right: auto;
   
     position: absolute;
-    
-    width:75%;
+    width:80%;
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
@@ -31,16 +30,17 @@
 
 .left-side{
     height:100%;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
 }
 
 .right-side{
     height: 100%;
-    background-color: aqua;
+    background-image: url("../img/mine.jpg");
+    border-left: 1px solid rgb(208, 208, 208) ;
 }
 
 .top-slide{
-    background-color: #E3DBD3;
+    background-color: #f5f3ed;
     height: 50px;
     width:100%;
     --bs-gutter-x: 0;
@@ -48,7 +48,6 @@
     flex-direction: row;
     flex-wrap: wrap;
   
-    
 }
 
 .user{
@@ -77,6 +76,9 @@
 
 }
 
+
+
+
 .icons-top-box{
     width: 50%;
     height:100%;
@@ -97,4 +99,93 @@
     width:20px;
     color: darkgrey;
     
+}
+
+.icon-box-right{
+    width: 10%;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.username-right{
+    font-size: 0.8rem;
+    padding-left: 7px;
+}
+
+.last-access{
+    font-size: 0.7rem;
+    padding-left: 7px;
+    color: rgb(135, 135, 135);
+}
+
+.enable-notifications{
+    background-color: #8EDAFC;
+    height: 65px;
+    width:100%;
+    --bs-gutter-x: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+}
+
+.notifications-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.notifications-icon{
+    padding-left: 20px;
+}
+
+.icon-alert{
+    color: #8EDAFC ;
+    background-color: white;
+    border-radius: 50%;
+    padding: 11px 14px;
+    font-size: 17px;
+
+}
+
+.subtitle-notification{
+    font-size: 0.7rem;
+    padding-left: 7px;
+    color: rgb(106, 106, 106);
+    text-decoration: underline;
+}
+
+.title-notification{
+    font-size: 0.9rem;
+    padding-left: 7px;
+}
+
+.icon-search{
+color: #B6BCC1;
+
+background-color: white;
+}
+
+.inputs{
+    flex-direction: row;
+    display: flex;
+    flex-wrap:wrap;
+    background-color: #FAFAFA;
+}
+
+.iconsearch-box{
+    background-color: white;
+    border:1px solid rgb(236, 236, 236);
+    padding-top: 2px;
+}
+
+.search_bar{
+    font-size: 0.8rem;
+    border:1px solid rgb(236, 236, 236);
+    font-size: 0.8rem;
+    padding-left: 8px;
+    color: #B6BCC1;
 }
