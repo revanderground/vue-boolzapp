@@ -1,14 +1,18 @@
+/* Background */
+
 .topbackground{
     background-color: #009688;
-    height: 100px;
+    height: 15vh;
  
 }
 
 .background-main{
     background-color: #D9DBD5;
-    height: calc(100vh - 100px); 
+    height: 85vh; 
   
 }
+
+/* Box app */
 
 .appbox{
     background-color: rgb(180, 180, 180);
@@ -16,7 +20,7 @@
 
     left:0;
     right:0;
-    top:30px;
+    top:5vh;
   
     margin-left: auto;
     margin-right: auto;
@@ -28,6 +32,7 @@
     flex-wrap:wrap;
 }
 
+/* App box splitting */
 .left-side{
     height:100%;
     background-color: rgb(255, 255, 255);
@@ -39,6 +44,7 @@
     border-left: 1px solid rgb(208, 208, 208) ;
 }
 
+/* Left side */
 .top-slide{
     background-color: #f5f3ed;
     height: 50px;
@@ -100,23 +106,8 @@
     
 }
 
-.icon-box-right{
-    width: 10%;
-    padding-left: 10px;
-    padding-right: 10px;
-    
-}
 
-.username-right{
-    font-size: 0.8rem;
-    padding-left: 7px;
-}
-
-.last-access{
-    font-size: 0.7rem;
-    padding-left: 7px;
-    color: rgb(135, 135, 135);
-}
+/* Notification section */
 
 .enable-notifications{
     background-color: #8EDAFC;
@@ -162,6 +153,7 @@
     padding-left: 7px;
 }
 
+/* search bar */
 .icon-search{
 color: #B6BCC1;
 
@@ -192,6 +184,25 @@ background-color: white;
     padding-left: 8px;
     color: #232323;
     border-radius: 1px;
+}
+
+/* right side */
+.icon-box-right{
+    width: 10%;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.username-right{
+    font-size: 0.8rem;
+    padding-left: 7px;
+}
+
+.last-access{
+    font-size: 0.7rem;
+    padding-left: 7px;
+    color: rgb(135, 135, 135);
 }
 
 .rightside-mainblock{
@@ -231,6 +242,8 @@ background-color: white;
     border-radius: 1px;
     font-size: 0.7rem;
 }
+
+/* slides style */
 
 .top-contact-slide{
     height: 60px;
@@ -275,15 +288,12 @@ background-color: white;
 }
 
 
-.icon-box-right{
-    width:20%;
-}
 
 .active{
     background-color: #eeeeee;
 }
 
 .contactlist{
-    height:calc(100% - 250);
-    overflow:hidden;
+    height:calc(100% - 150px);
+    overflow:auto;
 }

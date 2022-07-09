@@ -4,21 +4,30 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
+
+    <!-- Vue.js link -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.0/dist/vue.js"></script>
+
+    <!-- Bootstrap icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!-- Fontawesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- Bơotstrap Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     
-    
+    <!-- CSS style sheet link -->
     <link rel="stylesheet" href="css/style.css"/>
     
     <title>Bolzapp</title>
 </head>
 <body>
 
+
     <div id="root">
 
+        <!-- App box container -->
         <div class="boxpage">
             <div class="topbackground">
                
@@ -26,7 +35,12 @@
             </div>
 
             <div class="appbox">
+
+                <!------------- LÊFT Side ----------->
+            
                 <div class="left-side col-4">
+                    
+                    <!-- User slide  -->
                     <div class="top-slide">
                         <div class="user">
                             <div class="myimg">
@@ -53,6 +67,7 @@
                       
                     </div>
 
+                <!-- Notifications section -->
                     <div class="enable-notifications">
                         <div class="notifications-details">
                             <div class="notifications-icon">
@@ -70,6 +85,7 @@
                       
                     </div>
 
+                    <!-- Search bar -->
                     <div>
                         <div class="inputs">
                             <div class="iconsearch-box px-3">
@@ -82,15 +98,17 @@
 
                     </div>
 
+                    <!-- Contact List -->
                     <div class="contactlist">
 
-                        <div class="top-contact-slide"  
+                        <div class="top-contact-slide" 
                             v-for="(contact,index) in contacts" 
                             :class="{active: index == activeIndex}"
                             @click="setActiveIndex(index)" >
-                            <div class="user-contact" >
-                                <div class="myimg" >
-                                    <img class="my_img" :src="getFullPathImage()" alt="contact_img">
+                            
+                            <div class="user-contact">
+                                <div class="myimg">
+                                    <img class="my_img"  :src="'./img/avatar' + contact.avatar + '.jpg'" alt="contact_img">
                                 </div>
                                 <div class="contact-info">
                                     <div class="contact-name">{{contact.name}}</div>
@@ -109,21 +127,20 @@
 
                     </div>
                    
-
-                    
-
-
-
                 </div>
 
+
+                <!-- RIGHT SIDE -->
+                
+                <!-- Top -->
                 <div class="right-side col-8">
                     <div class="top-slide">
                         <div class="user">
                             <div class="myimg">
-                                <img class="my_img" src="img/uchiha.jpg" alt="my_img">
+                                <img class="my_img" :src="getFullPathImage()" alt="my_img">
                             </div>
-                            <div class="user-contact-info-rightslide">
-                                <div class="username">Thuan</div>
+                            <div class="user-contact-info-rightslide" v-model="contacts[activeIndex].name">
+                                <div class="username">{{contacts[activeIndex].name}}</div>
                                 <div class="last-access">Ultimo accesso oggi alle</div>
 
                             </div>
@@ -151,11 +168,14 @@
                       
                     </div>
 
+                    <!-- MESSAGES SECTION -->
                     <div class="rightside-mainblock">
-                        skdlkdl
+                        
                     </div>
 
-                    <div class="rightside-bottom">
+
+                    <!-- Right-side bottom -->
+                   <div class="rightside-bottom">
                         <div class="rightside-bottomicon">
                             <i class="iconbottom fa-regular fa-face-smile"></i>
                         </div>

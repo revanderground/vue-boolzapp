@@ -3,10 +3,10 @@ const app = new Vue (
         el: '#root',
         data: {
 
-            activeIndex: 0,
+            activeIndex:0,
             index:0,
 
-            currentIndex: 0,
+        
 
             contacts: [
                 {
@@ -178,16 +178,20 @@ const app = new Vue (
 
             setActiveIndex(newIndex){
                 this.activeIndex = newIndex;
+                return this.activeIndex;
             },
 
-            getFullPathImage: function(){
-                
-                return 'img/avatar' + this.contacts[this.activeIndex].avatar + '.jpg';
+            getFullPathImage: function(){                
+                return'img/avatar' + this.contacts[this.activeIndex].avatar + '.jpg';         
 
             }
+
+           
+
+
         },
 
-        
+   
     })    
 
 
