@@ -242,15 +242,7 @@ const app = new Vue (
             },
     },
 
-    // computed: {
-    //     filteredContacts() {
-    //         return this.contacts.filter(
-    //             contact => {
-    //                 return contact.name.toLocaleLowerCase().includes(this.inputs.toLowerCase());
-    //             }
-    //         );
-    //     }
-    // }
+  
 
 })    
 
