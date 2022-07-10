@@ -187,6 +187,7 @@ const app = new Vue (
 
             },
 
+            //Funzione input per stampare il messaggio
             addMessage: function() {
                 if (this.newMessage != "") {
                    
@@ -195,11 +196,29 @@ const app = new Vue (
                         status: 'sent',
                     }
                     this.contacts[this.activeIndex].messages.push(msgElement)
-                   
-                    this.newMessage = ""
+                    // richiama la funzione di risposta automatica
+                    this.autoreply(this.newMessage);
 
+                    this.newMessage = "";
                     
                 }
+            },
+
+            // Funzione di risposta automatica 
+            autoreply: function(messaggio) {
+                console.log(messaggio);
+                let reply = messaggio;
+                setTimeout(() => {
+                    console.log(reply);
+                   
+                    let msgElement = {                      
+                        message: "OK",
+                        status: 'received',
+                    }
+                    this.contacts[this.activeIndex].messages.push(msgElement)
+                    console.log(reply);
+    
+                }, 1000);
             },
 
         },
