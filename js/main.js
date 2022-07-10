@@ -5,6 +5,7 @@ const app = new Vue (
 
             activeIndex:0,
             index:0,
+            newMessage: "",
 
         
 
@@ -184,7 +185,22 @@ const app = new Vue (
             getFullPathImage: function(){                
                 return'img/avatar' + this.contacts[this.activeIndex].avatar + '.jpg';         
 
-            }
+            },
+
+            addMessage: function() {
+                if (this.newMessage != "") {
+                   
+                    let msgElement = {
+                        message: this.newMessage,
+                        status: 'sent',
+                    }
+                    this.contacts[this.activeIndex].messages.push(msgElement)
+                   
+                    this.newMessage = ""
+
+                    
+                }
+            },
 
         },
 

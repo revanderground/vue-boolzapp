@@ -188,7 +188,15 @@
                         </div>
 
                         <div class="sendmsgbox">
-                            <input class="stylesendmsg" placeholder="Scrivi un messaggio" type="text" class="col-12">
+                            <input
+                            class="col-12"
+                            v-model="newMessage"
+                            @keyup.enter="addMessage"
+                            placeholder="Scrivi messaggio"
+                          />
+                        
+                        
+                        
                         </div>
 
                         <div class="rightside-bottomicon">

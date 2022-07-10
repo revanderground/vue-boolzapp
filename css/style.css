@@ -207,6 +207,7 @@ background-color: white;
 
 .rightside-mainblock{
     height: calc(100% - 100px);
+    padding: 10px;
 }
 
 .rightside-bottom{
@@ -302,6 +303,7 @@ background-color: white;
     font-size: 15px;
     color:rgb(114, 114, 114);
     margin-left: 5px;
+    margin-top: 5px;
 
 }
 
@@ -310,7 +312,7 @@ background-color: white;
     float: right;
     margin-right: 60px;
 
-    padding: 5px;
+    padding: 8px;
     border-radius: 7px;
     clear: both;
 }
@@ -318,9 +320,8 @@ background-color: white;
     background-color: rgb(255, 255, 255);
     float: left;
     margin-left: 60px;
-    padding: 5px;
+    padding: 8px;
     border-radius: 7px;
-    padding: 5px;
     clear: both;
     
 }
