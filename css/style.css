@@ -297,3 +297,30 @@ background-color: white;
     height:calc(100% - 150px);
     overflow:auto;
 }
+
+.message{
+    font-size: 15px;
+    color:rgb(114, 114, 114);
+    margin-left: 5px;
+
+}
+
+.sent {
+    background-color: #D9FDD3;
+    float: right;
+    margin-right: 60px;
+
+    padding: 5px;
+    border-radius: 7px;
+    clear: both;
+}
+.received {
+    background-color: rgb(255, 255, 255);
+    float: left;
+    margin-left: 60px;
+    padding: 5px;
+    border-radius: 7px;
+    padding: 5px;
+    clear: both;
+    
+}

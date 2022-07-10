@@ -36,7 +36,7 @@
 
             <div class="appbox">
 
-                <!------------- LÊFT Side ----------->
+                <!------------- LEFT Side ----------->
             
                 <div class="left-side col-4">
                     
@@ -170,6 +170,13 @@
 
                     <!-- MESSAGES SECTION -->
                     <div class="rightside-mainblock">
+
+                
+                        <div v-for="(message) in contacts[activeIndex].messages">
+                            <div class="message my-1" :class="message.status"
+                            >{{ message.message }} 
+                            </div>
+                        </div>    
                         
                     </div>
 

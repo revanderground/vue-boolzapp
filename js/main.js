@@ -186,9 +186,6 @@ const app = new Vue (
 
             }
 
-           
-
-
         },
 
    
