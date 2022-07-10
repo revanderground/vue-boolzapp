@@ -160,6 +160,10 @@ color: #B6BCC1;
 background-color: white;
 }
 
+.visible {
+    display: block;
+}
+
 .inputs{
     flex-direction: row;
     display: flex;

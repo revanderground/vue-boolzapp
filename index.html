@@ -92,7 +92,11 @@
                                 <i class="icon-search fa fa-search col-2 "></i>
                             </div>
                         
-                            <input type="text" class="search_bar col-10" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" 
+                                class="search_bar col-10" 
+                                placeholder="Cerca o inizia una nuova chat"
+                                v-model="filterMessages"
+                                @keyup="searchUser">
                           
                         </div>
 
@@ -102,7 +106,8 @@
                     <div class="contactlist">
 
                         <div class="top-contact-slide" 
-                            v-for="(contact,index) in contacts" 
+                        v-if="contact.visible"    
+                        v-for="(contact,index) in contacts" 
                             :class="{active: index == activeIndex}"
                             @click="setActiveIndex(index)" >
                             

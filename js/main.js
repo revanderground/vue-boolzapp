@@ -2,11 +2,6 @@ const app = new Vue (
     {
         el: '#root',
         data: {
-
-            activeIndex:0,
-            index:0,
-            newMessage: "",
-
         
 
             contacts: [
@@ -168,11 +163,18 @@ const app = new Vue (
                             date: '10/01/2020 15:51:00',
                             message: 'OK!!',
                             status: 'received'
-                        }
+                        },
                     ],
                 }
-            ]
+            ],
            
+
+            activeIndex:0,
+            index:0,
+            newMessage: "",
+            filterMsg : "",
+
+
         },
 
         methods: {
@@ -221,9 +223,35 @@ const app = new Vue (
                 }, 1000);
             },
 
-        },
+            // Funzione per ricercare l'utente
+            searchUser(){
 
-   
-    })    
+                let inputs = this.filterMessages.toLowerCase();
+    
+                console.log(inputs);
+                this.contacts.forEach((contact) => {
+    
+                    // Controllo se contact.name include i caratteri degli input che digito sulla tastiera
+                    if (contact.name.toLowerCase().includes(inputs)) {
+                        contact.visible = true;
+                    } else {
+                        contact.visible = false;
+                    }
+                });
+    
+            },
+    },
+
+    // computed: {
+    //     filteredContacts() {
+    //         return this.contacts.filter(
+    //             contact => {
+    //                 return contact.name.toLocaleLowerCase().includes(this.inputs.toLowerCase());
+    //             }
+    //         );
+    //     }
+    // }
+
+})    
 
 
