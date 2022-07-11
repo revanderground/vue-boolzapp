@@ -183,10 +183,18 @@
 
                 
                         <div v-for="(message) in contacts[activeIndex].messages">
-                            <div class="message my-1" :class="message.status"
-                            >{{ message.message }} 
-                            <span class="message-date" id="date">{{ message.date.split(' ')[1]}}</span>
+                            <div class="message my-1" :class="message.status">
+                                {{ message.message }} 
+                                <span class="message-date" id="date">{{ message.date.split(' ')[1]}}</span>
+                                <i @click="showDrop(drop)" class="drop-arrow fas fa-chevron-down"></i>
                             </div>
+
+                            
+
+                           
+
+
+                            
                 
                             
                             

@@ -308,6 +308,7 @@ background-color: white;
     color:rgb(114, 114, 114);
     margin-left: 5px;
     margin-top: 5px;
+    position: relative;
 
 }
 
@@ -319,6 +320,19 @@ background-color: white;
     display: flex;
     justify-content: flex-end;
     color: #a8afb5;
+}
+
+.message:hover .drop-arrow{
+    opacity:1;
+}
+
+.drop-arrow{
+    position:absolute;
+    right: 10px;
+    color: #a8afb5;
+    background-color: inherit;
+    opacity:0;
+    font-size: medium;
 }
 
 .sent {
