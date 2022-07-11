@@ -19,6 +19,9 @@
     
     <!-- CSS style sheet link -->
     <link rel="stylesheet" href="css/style.css"/>
+
+     <!-- day.js cdn -->
+     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     
     <title>Bolzapp</title>
 </head>
@@ -117,12 +120,12 @@
                                 </div>
                                 <div class="contact-info">
                                     <div class="contact-name">{{contact.name}}</div>
-                                    <div class="lastmsg-notification">Ultimo messaggio inviato</div>
+                                    <div v-if="contact.messages.length > 0" class="lastmsg-notification">{{contact.messages.slice(-1)[0].message}}</div>
 
                                 </div>
 
                                 <div class="icons-top-box">
-                                    <div class="date-lastmsg-slide">klklkl</div>         
+                                    <div v-if="contact.messages.length > 0"  class="date-lastmsg-slide">{{contact.messages.slice(-1)[0].date.slice(0,3)}}</div>         
                                 </div>
 
                             </div>
@@ -223,7 +226,6 @@
       
 
         
-
         <script type="application/javascript" src="./js/main.js"></script>          
 </body>
 </html>

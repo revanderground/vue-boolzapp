@@ -194,6 +194,7 @@ const app = new Vue (
                 if (this.newMessage != "") {
                    
                     let msgElement = {
+                        date: dayjs().format('ddd/MM/YYYY HH:mm:ss'),
                         message: this.newMessage,
                         status: 'sent',
                     }
@@ -213,7 +214,8 @@ const app = new Vue (
                 setTimeout(() => {
                     console.log(reply);
                    
-                    let msgElement = {                      
+                    let msgElement = {  
+                        date: dayjs().format('ddd/MM/YYYY HH:mm:ss'),                    
                         message: "OK",
                         status: 'received',
                     }
