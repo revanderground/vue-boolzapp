@@ -127,7 +127,7 @@
                                 </div>
 
                                 <div class="icons-top-box">
-                                    <div v-if="contact.messages.length > 0"  class="date-lastmsg-slide">{{contact.messages.slice(-1)[0].date.slice(0,5)}}</div>         
+                                    <div v-if="contact.messages.length > 0"  class="date-lastmsg-slide">{{contact.messages.slice(-1)[0].date.split(' ')[1]}}</div>         
                                 </div>
 
                             </div>
@@ -151,7 +151,7 @@
                             </div>
                             <div class="user-contact-info-rightslide" v-model="contacts[activeIndex].name">
                                 <div class="username">{{contacts[activeIndex].name}}</div>
-                                <div class="last-access">Ultimo accesso oggi alle {{contacts[activeIndex].messages.slice(-1)[0].date.slice(11)}}</div>
+                                <div class="last-access">Ultimo accesso oggi alle {{contacts[activeIndex].messages.slice(-1)[0].date.split(' ')[1]}}</div>
 
                             </div>
                                 

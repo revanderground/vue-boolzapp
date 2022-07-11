@@ -196,7 +196,7 @@ const app = new Vue (
                 if (this.newMessage != "") {
                    
                     let msgElement = {
-                        date: moment().format('ddd/MM/YYYY HH:mm:ss'),
+                        date: moment().format('DD/MM/YYYY HH:mm'),
                         message: this.newMessage,
                         status: 'sent',
                     }
@@ -217,7 +217,7 @@ const app = new Vue (
                     console.log(reply);
                    
                     let msgElement = {  
-                        date: moment().format('ddd/MM/YYYY HH:mm:ss'),                    
+                        date: moment().format('DD/MM/YYYY HH:mm'),                    
                         message: "OK",
                         status: 'received',
                     }
