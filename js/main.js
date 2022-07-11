@@ -215,7 +215,7 @@ const app = new Vue (
                     console.log(reply);
                    
                     let msgElement = {  
-                        date: dayjs().format('ddd/MM/YYYY HH:mm:ss'),                    
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),                    
                         message: "OK",
                         status: 'received',
                     }
