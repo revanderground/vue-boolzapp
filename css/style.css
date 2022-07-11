@@ -311,6 +311,16 @@ background-color: white;
 
 }
 
+.message-date {
+    font-size: 10px;
+    float:right;
+    padding-left: 25px;
+    padding-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    color: #a8afb5;
+}
+
 .sent {
     background-color: #D9FDD3;
     float: right;

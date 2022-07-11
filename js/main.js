@@ -189,7 +189,7 @@ const app = new Vue (
 
             },
 
-
+        
 
             //Funzione input per stampare il messaggio
             addMessage: function() {
