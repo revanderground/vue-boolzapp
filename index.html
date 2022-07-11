@@ -20,8 +20,10 @@
     <!-- CSS style sheet link -->
     <link rel="stylesheet" href="css/style.css"/>
 
-     <!-- day.js cdn -->
-     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+     <!-- moment.js cdn -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous"></script>
     
     <title>Bolzapp</title>
 </head>
@@ -149,7 +151,7 @@
                             </div>
                             <div class="user-contact-info-rightslide" v-model="contacts[activeIndex].name">
                                 <div class="username">{{contacts[activeIndex].name}}</div>
-                                <div class="last-access">Ultimo accesso oggi alle</div>
+                                <div class="last-access">Ultimo accesso oggi alle {{contacts[activeIndex].messages.slice(-1)[0].date.slice(11)}}</div>
 
                             </div>
                                 

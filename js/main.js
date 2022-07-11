@@ -189,12 +189,14 @@ const app = new Vue (
 
             },
 
+
+
             //Funzione input per stampare il messaggio
             addMessage: function() {
                 if (this.newMessage != "") {
                    
                     let msgElement = {
-                        date: dayjs().format('ddd/MM/YYYY HH:mm:ss'),
+                        date: moment().format('ddd/MM/YYYY HH:mm:ss'),
                         message: this.newMessage,
                         status: 'sent',
                     }
@@ -215,7 +217,7 @@ const app = new Vue (
                     console.log(reply);
                    
                     let msgElement = {  
-                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),                    
+                        date: moment().format('ddd/MM/YYYY HH:mm:ss'),                    
                         message: "OK",
                         status: 'received',
                     }
