@@ -189,7 +189,18 @@ const app = new Vue (
 
             },
 
+            //! this function tranform times in format HH:MM
+            getHourFromArray(dateToSlice){
+                let date = dateToSlice.split(" ");
+                let dateNoSec = date[1].split(":");
+                return dateNoSec[0] + ':' + dateNoSec[1];
+            },
 
+             //! this function return you the position of the last date 
+            lastDate(activeIndex){
+                let lengthArray = (this.contacts[activeIndex].messages.length) - 1
+                return this.contacts[activeIndex].messages[lengthArray].date
+            },
 
             scrollToEnd(){
                 var container = document.querySelector(".rightside-mainblock");
@@ -269,6 +280,7 @@ const app = new Vue (
             this.scrollToEnd();
         },
 
+    
  
 
 })
