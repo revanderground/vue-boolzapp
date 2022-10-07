@@ -153,7 +153,7 @@
                             </div>
                             <div class="user-contact-info-rightslide" v-model="contacts[activeIndex].name">
                                 <div class="username">{{contacts[activeIndex].name}}</div>
-                                <div class="last-access">Ultimo accesso oggi alle {{contacts[activeIndex].messages.slice(-1)[0].date.split(' ')[1]}}</div>
+                                <div class="last-access">Ultimo accesso oggi alle {{contacts[activeIndex].messages.slice(-1)[0].date.split(' ')[1].split(':')[0]}}:{{contacts[activeIndex].messages.slice(-1)[0].date.split(' ')[1].split(':')[0]}}</div>
 
                             </div>
                                 
