@@ -212,6 +212,7 @@ background-color: white;
 .rightside-mainblock{
     height: calc(100% - 100px);
     padding: 10px;
+    overflow: auto;
 }
 
 .rightside-bottom{

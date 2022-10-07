@@ -189,6 +189,12 @@ const app = new Vue (
 
             },
 
+            scrollToEnd(){
+                var container = document.querySelector(".rightside-mainblock");
+                var scrollHeight = container.scrollHeight;
+				container.scrollTop = scrollHeight;
+
+            },
         
 
             //Funzione input per stampare il messaggio
@@ -205,9 +211,14 @@ const app = new Vue (
                     this.autoreply(this.newMessage);
 
                     this.newMessage = "";
-                    
+
+                    this.scrollToEnd();
+
                 }
             },
+
+   
+
 
             // Funzione di risposta automatica 
             autoreply: function(messaggio) {
@@ -223,8 +234,10 @@ const app = new Vue (
                     }
                     this.contacts[this.activeIndex].messages.push(msgElement)
                     console.log(reply);
+
     
                 }, 1000);
+
             },
 
             // Funzione per ricercare l'utente
@@ -244,6 +257,18 @@ const app = new Vue (
                 });
     
             },
-    },
+
+        },
+
+        mounted(){
+            this.scrollToEnd();
+        },
+
+
+        updated(){
+            this.scrollToEnd();
+        },
+
+ 
 
 })
