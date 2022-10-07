@@ -189,6 +189,8 @@ const app = new Vue (
 
             },
 
+
+
             scrollToEnd(){
                 var container = document.querySelector(".rightside-mainblock");
                 var scrollHeight = container.scrollHeight;
@@ -216,8 +218,6 @@ const app = new Vue (
 
                 }
             },
-
-   
 
 
             // Funzione di risposta automatica 

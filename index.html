@@ -127,7 +127,9 @@
                                 </div>
 
                                 <div class="icons-top-box">
-                                    <div v-if="contact.messages.length > 0"  class="date-lastmsg-slide">{{contact.messages.slice(-1)[0].date.split(' ')[1]}}</div>         
+                                    <div v-if="contact.messages.length > 0"  class="date-lastmsg-slide">{{contact.messages.slice(-1)[0].date.split(' ')[1].split(':')[0]}}:{{contact.messages.slice(-1)[0].date.split(' ')[1].split(':')[1]}}
+
+                                    </div>         
                                 </div>
 
                             </div>
@@ -185,7 +187,7 @@
                         <div v-for="(message) in contacts[activeIndex].messages">
                             <div class="message my-1" :class="message.status">
                                 {{ message.message }} 
-                                <span class="message-date" id="date">{{ message.date.split(' ')[1]}}</span>
+                                <span class="message-date" id="date">{{ message.date.split(' ')[1].split(':')[0]}}:{{ message.date.split(' ')[1].split(':')[1]}}</span>
                                 <i @click="showDrop(drop)" class="drop-arrow fas fa-chevron-down"></i>
                                 <div class="dropdown-Menu">
                                  
